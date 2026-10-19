@@ -1,0 +1,27 @@
+[project]
+name = "deficit-loop"
+version = "0.1.0"
+description = "Autonomous goal-draining loop: supply one measurable deficit at a time, adopt only what an independent re-measurement confirms."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Kim Taemin" }]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+deficit-loop = "deficit_loop.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["deficit_loop*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]

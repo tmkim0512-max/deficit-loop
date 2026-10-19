@@ -1,0 +1,7 @@
+{
+  "name": "docstrings",
+  "oracle": ["python3", "tools/measure_docstrings.py", "src"],
+  "supplier": {"kind": "script", "command": ["python3", "tools/fill_docstring.py"]},
+  "protected_paths": ["tools/", "deficit.json"],
+  "budget": {"max_attempts": 20, "max_seconds": 300, "stall_k": 3, "max_reject_per_key": 2}
+}
